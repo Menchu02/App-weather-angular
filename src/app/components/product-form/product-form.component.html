@@ -1,0 +1,34 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="container-card col-md-6">
+      <div class="card card-body">
+        <label for="email">Te mandamos la previsión a tu correo</label>
+
+        <br />
+
+        <input type="email" [formControl]="emailCtrl" placeholder="Email" />
+        <p *ngIf="emailCtrl.errors && emailCtrl.dirty">
+          <small *ngIf="emailCtrl.hasError('required')">
+            Este campo es requerido
+          </small>
+          <small *ngIf="emailCtrl.hasError('maxlength')">
+            Este campo debe ser máximo de 6
+          </small>
+          <small *ngIf="emailCtrl.hasError('minlength')">
+            Este campo debe ser mínimo de 4
+          </small>
+        </p>
+
+        <button
+          type="submit"
+          class="button-card"
+          [disabled]="emailCtrl.invalid"
+          type="button"
+          (click)="getEmail($event)"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

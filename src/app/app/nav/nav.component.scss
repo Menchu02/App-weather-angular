@@ -1,0 +1,43 @@
+.svg {
+  display: flex;
+
+  justify-content: flex-start;
+  margin-left: 65px;
+}
+.nav {
+  display: flex;
+  margin: 0 65px;
+  background-color: #89a7da;
+  background-repeat: no-repeat;
+  height: 80px;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 20px;
+  height: 130px;
+}
+.nav-item__icono {
+  // margin-left: 500px;
+  margin-left: 10px;
+}
+.illustration {
+  width: 150px;
+  height: 150px;
+  margin-left: 445px;
+}
+#estrella1 {
+  transform: translate(16%, 26%);
+  animation: moveStar 1s 0.5s both;
+}
+#estrella2 {
+  transform: translate(37%, 26%);
+  animation: moveStar 1s 2s both;
+}
+#estrella3 {
+  transform: translate(57%, 26%);
+  animation: moveStar 1s 3s both;
+}
+@keyframes moveStar {
+  100% {
+    transform: unset;
+  }
+}
